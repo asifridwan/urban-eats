@@ -1,7 +1,7 @@
 import Logo from '../components/Logo';
-import SigninForm from '../components/SigninForm';
+import SignupForm from '../components/SignupForm';
 
-export default function SigninPage() {
+export default function SignupPage() {
     const style = {
         background: 'bg-gray-50 h-screen flex items-center justify-center',
         background_dark: 'dark:bg-gray-950',
@@ -14,8 +14,8 @@ export default function SigninPage() {
         <section className={`${style.background} ${style.background_dark}`}>
             <div className={style.container}>
                 <Logo />
-                <p className={`${style.tagline} ${style.tagline_dark}`}>Sign in to browse and manage your favorite restaurants</p>
-                <SigninForm />
+                <p className={`${style.tagline} ${style.tagline_dark}`}>Sign up to check out restaurants and bookmark your favorite ones !</p>
+                <SignupForm />
             </div>
         </section>
     );

@@ -1,7 +1,7 @@
 import ErrorMessage from './ErrorMessage';
 import InputField from './InputField';
 
-export default function SigninForm() {
+export default function SignupForm() {
     const style = {
         parent: 'bg-white w-full px-12 py-16 rounded-lg',
         parent_dark: 'dark:bg-gray-900',
@@ -15,10 +15,12 @@ export default function SigninForm() {
         <div className={`${style.parent} ${style.parent_dark}`}>
             <form action='' className={style.form}>
                 <ErrorMessage message='Error Message' />
-                <InputField type='text' id='signinid' label='Email or Username' />
-                <InputField type='password' id='signinpassword' label='Password' />
-                <button className={style.button}>Sign in</button>
-                <p className={`${style.link} ${style.link_dark}`}>Don't have an account ? Sign up now</p>
+                <InputField type='email' id='email' label='Email Address' />
+                <InputField type='text' id='username' label='Username' />
+                <InputField type='password' id='password_1' label='Password' />
+                <InputField type='password' id='password_2' label='Confirm Password' />
+                <button className={style.button}>Sign up</button>
+                <p className={`${style.link} ${style.link_dark}`}>Already have an account ? Sign in</p>
             </form>
         </div>
     );
