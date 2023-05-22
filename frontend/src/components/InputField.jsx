@@ -2,15 +2,17 @@ export default function InputField({type, id, label, placeholder}) {
     const style = {
         parent: 'space-y-2',
         label: 'block text-sm font-medium text-gray-700',
-        field: 'w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 outline-indigo-700',
-        placeholder: 'placeholder:text-gray-400'
+        label_dark: 'dark:text-gray-300',
+        field: 'w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring focus:ring-indigo-700',
+        field_dark: 'dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100',
+        placeholder: 'placeholder:text-gray-500'
     }
 
     return (
         <div className={style.parent}>
-            <label htmlFor={id} className={style.label}>{label}</label>
-            {type !== 'password' && <input type={type} id={id} placeholder={placeholder} className={`${style.field} ${style.placeholder}`} required />}
-            {type === 'password' && <input type='password' id={id} className={style.field} required />}
+            <label htmlFor={id} className={`${style.label} ${style.label_dark}`}>{label}</label>
+            {type !== 'password' && <input type={type} id={id} placeholder={placeholder} className={`${style.field} ${style.field_dark} ${style.placeholder}`} required />}
+            {type === 'password' && <input type='password' id={id} className={`${style.field} ${style.field_dark}`} required />}
         </div>
     );
 }
