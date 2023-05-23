@@ -1,8 +1,10 @@
-import SigninPage from "./pages/SigninPage";
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <SigninPage />
+    <section className='bg-gray-100 h-screen dark:bg-gray-950'>
+      <Navbar />
+    </section>
   );
 }
 

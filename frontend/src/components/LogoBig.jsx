@@ -1,4 +1,4 @@
-export default function Logo() {
+export default function LogoBig() {
     const style = {
         parent: 'text-gray-900 text-2xl font-bold uppercase',
         parent_dark: 'dark:text-gray-100',
