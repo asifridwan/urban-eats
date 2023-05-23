@@ -8,16 +8,16 @@ export default function Navbar() {
         ul_dark: 'dark:text-gray-300',
         i: 'ri-user-fill',
         span: 'ml-2'
-    }
+    };
 
     return (
         <nav className={`${style.nav} ${style.nav_dark}`}>
             <LogoSmall />
             <ul className={`${style.ul} ${style.ul_dark}`}>
                 <li>Browse</li>
-                <li>Bookmarks</li>
-                <li>Starred</li>
+                <li>Collections</li>
                 <li>Sign out</li>
+                <li>Toggle Theme</li>
                 <li>
                     <i className={style.i}></i>
                     <span className={style.span}>Username</span>

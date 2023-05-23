@@ -8,7 +8,7 @@ export default function SignupPage() {
         container: 'flex flex-col items-center space-y-6',
         tagline: 'text-gray-700 font-normal text-xl',
         tagline_dark: 'dark:text-gray-200'
-    }
+    };
 
     return (
         <section className={`${style.background} ${style.background_dark}`}>
