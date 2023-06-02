@@ -1,4 +1,4 @@
-export default function InputField({type, id, label}) {
+export default function InputField({type, id, label, required}) {
     const style = {
         parent: 'space-y-2',
         label: 'block text-sm font-medium text-gray-700',
@@ -10,7 +10,8 @@ export default function InputField({type, id, label}) {
     return (
         <div className={style.parent}>
             <label htmlFor={id} className={`${style.label} ${style.label_dark}`}>{label}</label>
-            {type !== 'password' && <input type={type} id={id} className={`${style.field} ${style.field_dark}`} required />}
+            {type !== 'password' && !required && <input type={type} id={id} className={`${style.field} ${style.field_dark}`} />}
+            {type !== 'password' && required && <input type={type} id={id} className={`${style.field} ${style.field_dark}`} required /> }
             {type === 'password' && <input type='password' id={id} className={`${style.field} ${style.field_dark}`} required />}
         </div>
     );
